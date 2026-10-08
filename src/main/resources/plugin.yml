@@ -1,0 +1,17 @@
+name: CrystalFFA
+version: 1.0.0
+main: dev.crystalffa.CrystalFFA
+api-version: '1.21'
+description: 100x100 crystal PvP free-for-all arena with auto-regen and a safe spawn platform.
+commands:
+  crystalffa:
+    aliases: [cffa]
+    description: Crystal FFA arena commands
+    usage: /<command> <join|leave|info|stats|create|rebuild|regen|delete>
+permissions:
+  crystalffa.play:
+    description: Join the crystal FFA arena
+    default: true
+  crystalffa.admin:
+    description: Create, rebuild, regen and delete the arena
+    default: op

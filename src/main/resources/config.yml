@@ -1,0 +1,38 @@
+# CrystalFFA configuration
+# NOTE: arena/platform geometry is saved when you run /cffa create.
+# After changing those values, run /cffa delete then /cffa create.
+
+arena:
+  size: 100                    # arena is size x size blocks (100 = 100x100)
+  surface-material: GRASS_BLOCK  # top layer (3 dirt, then stone, deepslate below y=0, bedrock at the bottom)
+  wall-material: BEDROCK       # boundary ring around the arena, from bedrock up to wall-height
+  wall-height: 40              # height of boundary walls above the surface
+  max-build-height: 30         # players can't place blocks above surface + this
+  pillars: 0                   # optional cover pillars on the flat surface (0 = fully flat)
+  pillar-material: OBSIDIAN
+  pillar-seed: 12345           # same seed = same pillar layout every rebuild
+
+platform:
+  height: 20                   # spawn platform sits this many blocks above the surface
+  radius: 5                    # radius 5 = 11x11 platform
+  material: QUARTZ_BLOCK
+  accent-material: SEA_LANTERN
+  protection-seconds: 20       # max time a spawning player is invulnerable
+  grace-seconds: 3             # protection left after stepping off the platform
+
+regen:
+  interval-seconds: 300        # arena auto-regenerates every 5 minutes (0 = off)
+  announce: true               # countdown messages to players in the arena
+  blocks-per-tick: 6000        # lower this if builds/regens cause lag
+
+kit:
+  crystal-stacks: 2
+  obsidian-stacks: 2
+  anchor-stacks: 1             # respawn anchors
+  glowstone-stacks: 2          # charges anchors
+  golden-apples: 16
+  extra-totems: 3              # besides the one in the offhand
+
+rules:
+  no-fall-damage: true         # you drop 20 blocks from the platform
+  no-hunger: true
